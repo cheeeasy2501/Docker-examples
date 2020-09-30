@@ -23,13 +23,13 @@
 define( 'DB_NAME', 'wordpress');
 
 /** Имя пользователя MySQL */
-define( 'DB_USER', 'wordpress');
+define( 'DB_USER', 'root');
 
 /** Пароль к базе данных MySQL */
 define( 'DB_PASSWORD', 'wordpress');
 
 /** Имя сервера MySQL */
-define( 'DB_HOST', 'db:3306');
+define( 'DB_HOST', 'mysql');
 
 /** Кодировка базы данных для создания таблиц. */
 define( 'DB_CHARSET', 'utf8');
