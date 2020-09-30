@@ -1,36 +1,43 @@
 version: '3.3'
 
 services:
-  db:
-    image: mysql:5.7
-    container_name: mysql_wordpress
-    volumes:
-      - db_data:/var/lib/mysql
+  nginx:
+    container_name: nginxwp
+    image: nginx:latest
     ports:
-      - "3306:3306"
+      - '80:80'
+    volumes:
+      - ./config/nginx:/etc/nginx/conf.d
+      - ./logs/nginx:/var/log/nginx
+      - ./wp-app:/var/www/html
+    links:
+      - wordpress
     restart: always
+
+  mysql:
+    container_name: mariadb
+    image: mariadb
+    ports:
+      - '3306:3306'
+    volumes:
+      - ./db-data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: wordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      - MYSQL_ROOT_PASSWORD=wordpress
+    restart: always
 
   wordpress:
-    depends_on:
-      - db
-    container_name: wordpress
-    image: wordpress:latest
-    volumes:
-        - ./wp-app:/var/www/html
+    container_name: wp
+    image: wordpress:5.1.1-fpm
     ports:
-      - "8000:80"
-    restart: always
+      - '9000:9000'
+    volumes:
+      - ./wp-app:/var/www/html
     environment:
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: wordpress
-      WORDPRESS_DB_PASSWORD: wordpress
-      WORDPRESS_DB_NAME: wordpress
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_TABLE_PREFIX=wp_
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_PASSWORD=wordpress
     links:
-       - db
-volumes:
-  db_data: {}
+      - mysql
+    restart: always
+
