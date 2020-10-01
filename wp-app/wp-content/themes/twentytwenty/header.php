@@ -28,7 +28,6 @@
 
 		<?php
 		wp_body_open();
-
 		?>
 
 		<header id="site-header" class="header-footer-group" role="banner">
@@ -65,8 +64,6 @@
 
 							// Site description.
 							twentytwenty_site_description();
-
-                        echo '123';
 						?>
 
 					</div><!-- .header-titles -->

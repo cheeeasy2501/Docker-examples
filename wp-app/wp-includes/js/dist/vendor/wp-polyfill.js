@@ -2485,7 +2485,7 @@ if (!setTask || !clearTask) {
         run.call(id);
       };
     };
-  // Rest old browsers
+  // rest old browsers
   } else {
     defer = function (id) {
       setTimeout(ctx(run, id, 1), 0);

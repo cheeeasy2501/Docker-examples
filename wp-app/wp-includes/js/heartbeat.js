@@ -446,7 +446,7 @@
 					delete response.heartbeat_nonce;
 				}
 
-				// Update the Rest API nonce if set and wp-api loaded.
+				// Update the rest API nonce if set and wp-api loaded.
 				if ( response.rest_nonce && typeof window.wpApiSettings === 'object' ) {
 					window.wpApiSettings.nonce = response.rest_nonce;
 					// This nonce is required for api-fetch through heartbeat.tick.

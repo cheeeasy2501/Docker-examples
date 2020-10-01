@@ -332,7 +332,7 @@ final class WP_Post {
 			return wp_list_pluck( $terms, 'name' );
 		}
 
-		// Rest of the values need filtering.
+		// rest of the values need filtering.
 		if ( 'ancestors' === $key ) {
 			$value = get_post_ancestors( $this );
 		} else {

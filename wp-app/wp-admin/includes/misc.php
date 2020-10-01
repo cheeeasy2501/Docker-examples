@@ -1194,7 +1194,7 @@ function wp_refresh_post_nonces( $response, $data, $screen_id ) {
  * @return array The Heartbeat response.
  */
 function wp_refresh_heartbeat_nonces( $response ) {
-	// Refresh the Rest API nonce.
+	// Refresh the rest API nonce.
 	$response['rest_nonce'] = wp_create_nonce( 'wp_rest' );
 
 	// Refresh the Heartbeat nonce.

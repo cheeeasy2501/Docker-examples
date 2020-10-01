@@ -1,15 +1,147 @@
-2020/09/30 12:42:30 [error] 27#27: *1 FastCGI sent in stderr: "PHP message: База данных WordPress возвратила ошибку Table 'wordpress.wp_options' doesn't exist в ответ на запрос INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('nonce_key', 'Q5!CS^t<)O?@F=lxu1>fEnc*+@jNA5.dGc4i#dR-;NzSy1`pEeQ611&E1XZV&1j9', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`), выполненный wp_can_install_language_pack, WP_Upgrader->fs_connect, Automatic_Upgrader_Skin->request_filesystem_credentials, WP_Upgrader_Skin->request_filesystem_credentials, request_filesystem_credentials, wp_nonce_field, wp_create_nonce, wp_hash, wp_salt, update_site_option, update_network_option, add_network_option, add_option
-PHP message: База данных WordPress возвратила ошибку Table 'wordpress.wp_options' doesn't exist в ответ на запрос INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('nonce_salt', 'Yr%TcB@yY,?<;Dd%kya5%;A$L}jo(16S;+n?GA&~mbMi/]p.,&NyNr?T%n~o0lc#', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`), выполненный wp_can_install_language_pack, WP_Upgrader->fs_connect, Automatic_Upgrader_Skin->request_filesystem_credentials, WP_Upgrader_Skin->request_filesystem_credentials, request_filesystem_credentials, wp_nonce_field, wp_create_nonce, wp_hash, wp_salt, update_site_option, update_network_option, add_network_option, add_option" while reading response header from upstream, client: 172.23.0.1, server: wordpress, request: "GET /wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.23.0.3:9000", host: "127.0.0.1", referrer: "http://127.0.0.1/"
-2020/09/30 12:43:37 [error] 27#27: *1 FastCGI sent in stderr: "PHP message: База данных WordPress возвратила ошибку Table 'wordpress.wp_options' doesn't exist в ответ на запрос INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('nonce_key', '@&xndoszH6b1_[T|NJOge(OHT09LdJD*&3;jBv~Qa2/nmMt_J+#0-0b=kz;G|OE3', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`), выполненный wp_can_install_language_pack, WP_Upgrader->fs_connect, Automatic_Upgrader_Skin->request_filesystem_credentials, WP_Upgrader_Skin->request_filesystem_credentials, request_filesystem_credentials, wp_nonce_field, wp_create_nonce, wp_hash, wp_salt, update_site_option, update_network_option, add_network_option, add_option
-PHP message: База данных WordPress возвратила ошибку Table 'wordpress.wp_options' doesn't exist в ответ на запрос INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('nonce_salt', '6NzF!tA]6*;;WxW|!Ec;E45Y6dO^1/K#X#kFinQU9o}.R$#<AN533eXo~w1hEv1W', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`), выполненный wp_can_install_language_pack, WP_Upgrader->fs_connect, Automatic_Upgrader_Skin->request_filesystem_credentials, WP_Upgrader_Skin->request_filesystem_credentials, request_filesystem_credentials, wp_nonce_field, wp_create_nonce, wp_hash, wp_salt, update_site_option, update_network_option, add_network_option, add_option" while reading response header from upstream, client: 172.24.0.1, server: localhost, request: "GET /wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost"
-2020/09/30 12:43:37 [error] 27#27: *7 FastCGI sent in stderr: "PHP message: База данных WordPress возвратила ошибку Table 'wordpress.wp_options' doesn't exist в ответ на запрос INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('nonce_key', '{Y7|_JE[%q,;t&pKd0;h$.rnT*9+y_t=>Kx]~60HF~iHNaYf*C& G?{Ft!/aeKNg', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`), выполненный wp_can_install_language_pack, WP_Upgrader->fs_connect, Automatic_Upgrader_Skin->request_filesystem_credentials, WP_Upgrader_Skin->request_filesystem_credentials, request_filesystem_credentials, wp_nonce_field, wp_create_nonce, wp_hash, wp_salt, update_site_option, update_network_option, add_network_option, add_option
-PHP message: База данных WordPress возвратила ошибку Table 'wordpress.wp_options' doesn't exist в ответ на запрос INSERT INTO `wp_options` (`option_name`, `option_value`, `autoload`) VALUES ('nonce_salt', ']^Qwu-CJ]gqHNpoFI6%:Dt$KWq|>94A $U?U&^K):iEJN,Wy.{^>S@}~1VQ4H~r&', 'no') ON DUPLICATE KEY UPDATE `option_name` = VALUES(`option_name`), `option_value` = VALUES(`option_value`), `autoload` = VALUES(`autoload`), выполненный wp_can_install_language_pack, WP_Upgrader->fs_connect, Automatic_Upgrader_Skin->request_filesystem_credentials, WP_Upgrader_Skin->request_filesystem_credentials, request_filesystem_credentials, wp_nonce_field, wp_create_nonce, wp_hash, wp_salt, update_site_option, update_network_option, add_network_option, add_option" while reading response header from upstream, client: 172.24.0.1, server: localhost, request: "GET /wp-admin/install.php HTTP/1.1", upstream: "fastcgi://172.24.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/install.php"
-2020/09/30 13:01:40 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:41 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:42 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:43 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:45 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:47 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:52 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:01:59 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
-2020/09/30 13:02:12 [emerg] 1#1: invalid number of arguments in "fastcgi_pass" directive in /etc/nginx/conf.d/default.conf:16
+2020/10/01 13:47:50 [error] 27#27: *35 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ':' or '{' in /var/www/html/wp-content/plugins/exchangerates/app/Controllers/ExchangeRatesController.php on line 35" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/admin.php?page=exchange-rates"
+2020/10/01 13:49:51 [error] 27#27: *41 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ':' or '{' in /var/www/html/wp-content/plugins/exchangerates/app/Controllers/ExchangeRatesController.php on line 35" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/admin.php?page=exchange-rates"
+2020/10/01 13:51:08 [error] 27#27: *43 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ':' or '{' in /var/www/html/wp-content/plugins/exchangerates/app/Controllers/ExchangeRatesController.php on line 35" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 13:51:08 [error] 27#27: *43 FastCGI sent in stderr: "PHP message: PHP Parse error:  syntax error, unexpected 'return' (T_RETURN), expecting ':' or '{' in /var/www/html/wp-content/plugins/exchangerates/app/Controllers/ExchangeRatesController.php on line 35" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-json"
+2020/10/01 14:02:22 [error] 27#27: *63 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/admin.php?page=exchange-rates"
+2020/10/01 14:03:02 [error] 27#27: *66 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:03:35 [error] 27#27: *66 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:04:01 [error] 27#27: *66 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:04:23 [error] 27#27: *70 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/admin.php?page=exchange-rates"
+2020/10/01 14:06:15 [error] 27#27: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:06:23 [error] 27#27: *76 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/admin.php?page=exchange-rates"
+2020/10/01 14:06:59 [error] 27#27: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:07:00 [error] 27#27: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:07:01 [error] 27#27: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:07:02 [error] 27#27: *73 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:08:24 [error] 27#27: *82 FastCGI sent in stderr: "PHP message: PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'prefix_register_my_rest_routes' not found or invalid function name in /var/www/html/wp-includes/class-wp-hook.php on line 287
+PHP message: PHP Fatal error:  Uncaught Error: Call to undefined function wp_get_current_user() in /var/www/html/wp-includes/capabilities.php:668
+Stack trace:
+#0 /var/www/html/wp-includes/functions.php(3215): current_user_can('unfiltered_html')
+#1 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1207): get_allowed_mime_types()
+#2 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(1113): WP_REST_Attachments_Controller->get_media_types()
+#3 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-posts-controller.php(67): WP_REST_Attachments_Controller->get_collection_params()
+#4 /var/www/html/wp-includes/rest-api/endpoints/class-wp-rest-attachments-controller.php(27): WP_REST_Posts_Controller->register_routes()
+#5 /var/www/html/wp-includes/rest-api.php(227): WP_REST_Attachments_Controller->register_routes()
+#6 /var/www/html/wp-includes/class-wp-hook.php(287): create_initial_rest_routes(Object(WP_REST_Server))
+#7 /var/www/html/wp-incl" while reading response header from upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/admin.php?page=exchange-rates"
+2020/10/01 14:18:40 [error] 27#27: *93 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/pluggable.php on line 1296
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/pluggable.php on line 1299" while reading upstream, client: 192.168.0.1, server: localhost, request: "GET /wp-json/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:43:59 [error] 27#27: *206 FastCGI sent in stderr: "PHP message: PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'register_routes' not found or invalid function name in /var/www/html/wp-includes/class-wp-hook.php on line 287
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/rest-api/class-wp-rest-server.php on line 1372" while reading upstream, client: 192.168.0.1, server: localhost, request: "GET /?rest_route=/ HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:44:04 [error] 27#27: *208 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/http.php on line 492
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/http.php on line 493
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-admin/admin-ajax.php on line 27
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-admin/admin-ajax.php on line 28
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/functions.php on line 6156
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/functions.php on line 6270
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-admin/includes/misc.php on line 1310" while reading upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/plugins.php?plugin_status=all&paged=1&s"
+2020/10/01 14:44:34 [error] 27#27: *206 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/rest-api/class-wp-rest-server.php on line 1372" while reading upstream, client: 192.168.0.1, server: localhost, request: "GET /?rest_route=/ HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
+2020/10/01 14:45:48 [error] 27#27: *211 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/http.php on line 492
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/http.php on line 493
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-admin/admin-ajax.php on line 27
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-admin/admin-ajax.php on line 28
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/functions.php on line 6156
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/functions.php on line 6270
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-admin/includes/misc.php on line 1310" while reading upstream, client: 192.168.0.1, server: localhost, request: "POST /wp-admin/admin-ajax.php HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/wp-admin/plugins.php?plugin_status=all&paged=1&s"
+2020/10/01 14:46:00 [error] 27#27: *211 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/pluggable.php on line 1296
+PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/pluggable.php on line 1299" while reading upstream, client: 192.168.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost", referrer: "http://localhost/"
+2020/10/01 14:47:07 [error] 27#27: *217 FastCGI sent in stderr: "PHP message: PHP Warning:  Cannot modify header information - headers already sent by (output started at /var/www/html/wp-content/plugins/exchangerates/exchange-rates.php:16) in /var/www/html/wp-includes/rest-api/class-wp-rest-server.php on line 1372" while reading upstream, client: 192.168.0.1, server: localhost, request: "GET /?rest_route=/rates/v1/currency HTTP/1.1", upstream: "fastcgi://192.168.0.3:9000", host: "localhost"
