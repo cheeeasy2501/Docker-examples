@@ -1,15 +1,15 @@
 <?php
 namespace App\Controllers;
 
-use App\Functions\ExchangeRatesFunctions as Functions;
+use App\Services\ExchangeRatesService;
 
 class ExchangeRatesController extends \WP_REST_Controller {
-	private $functions;
+	private $exchangeRatesService;
 
 	public function __construct() {
 		$this->namespace = 'rates/v1';
 		$this->rest_base = 'currency';
-		$this->functions = new Functions();
+		$this->exchangeRatesService = new ExchangeRatesService();
 	}
 
 	public function initPlugin() {
@@ -31,7 +31,7 @@ class ExchangeRatesController extends \WP_REST_Controller {
 
 	public function getCurrency() {
 		$settings = [ 'mode' => 'live'];
-
-		return $this->functions->getCurrencyLive();
+            //getCurrencyByMode
+		return $this->exchangeRatesService->getCurrencyLive();
 	}
 }
