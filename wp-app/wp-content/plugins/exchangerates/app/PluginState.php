@@ -3,13 +3,19 @@ namespace App;
 
 use App\Services\ExchangeRatesService;
 use App\Objects\Currency as CurrencyObject;
+use App\Cron\CurrencyCron;
+use App\Views\ExchangeRatesWidget;
 
 class PluginState{
 
     private $exchangeRatesService;
+    private $currencyCron;
+    private $widget;
 
     public function __construct($pluginBaseFile){
         $this->exchangeRatesService = new ExchangeRatesService();
+        $this->currencyCron = new CurrencyCron();
+        $this->widget = new ExchangeRatesWidget();
         register_activation_hook( $pluginBaseFile, [$this, 'activate'] );
         register_deactivation_hook( $pluginBaseFile, [$this, 'deactivate']);
     }
@@ -18,10 +24,15 @@ class PluginState{
         $currencies = $this->exchangeRatesService->getCurrenciesByApi();
         $this->installDataCurrencies($currencies);
         $this->installDataAvaliableCurrencies($currencies);
+        $this->setCurrenciesMode();
+        $this->currencyCron->install();
+
+        $this->widget->load();
+
     }
 
     public function deactivate(){
-
+        $this->currencyCron->deactivate();
     }
 
     private function installDataCurrencies($currencies) {
@@ -55,14 +66,22 @@ class PluginState{
 
             $avaliableCurrencies[$values->Cur_Abbreviation] = $setValue;
         }
-//        var_dump($avaliableCurrenciesOptions);
-//        var_dump(empty($avaliableCurrenciesOptions));
-//        wp_die();
+
         if(!$avaliableCurrenciesOptions && !empty($avaliableCurrenciesOptions)) {
             add_option('exchange_rates_avaliable_currencies', $avaliableCurrencies);
         } else {
             update_option('exchange_rates_avaliable_currencies', $avaliableCurrencies);
         }
-//        wp_die();
+    }
+
+    private function setCurrenciesMode() {
+        $defaultMode = 'live';
+        $defaultCurrencyModeOptions = get_option('exchange_rates_currencies_mode');
+
+        if(!$defaultCurrencyModeOptions && !empty($defaultCurrencyModeOptions)) {
+            add_option('exchange_rates_currencies_mode', $defaultMode);
+        } else {
+            update_option('exchange_rates_currencies_mode', $defaultMode);
+        }
     }
 }

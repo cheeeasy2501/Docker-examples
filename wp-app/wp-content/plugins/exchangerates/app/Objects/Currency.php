@@ -4,14 +4,14 @@ namespace App\Objects;
 
 class Currency {
 
-    private $id;
-    private $abbreviation;
-    private $name;
-    private $scale;
-    private $officialRate;
+    public $id;
+    public $abbreviation;
+    public $name;
+    public $scale;
+    public $officialRate;
 
 
-    public function __construct($id, $abbreviation, $name, $scale, $officialRate){
+    public function __construct($id, $abbreviation, $scale, $name, $officialRate){
         $this->id = $id;
         $this->abbreviation = $abbreviation;
         $this->scale = $scale;

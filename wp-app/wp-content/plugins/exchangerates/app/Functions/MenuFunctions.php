@@ -1,14 +1,14 @@
 <?php
 namespace App\Functions;
 
-use App\Views\MenuViews;
+use App\Views\MenuView;
 
 class MenuFunctions {
 
     private $views;
 
     public function __construct(){
-        $this->views = new MenuViews();
+        $this->views = new MenuView();
     }
 
     public function initializeMenus(){

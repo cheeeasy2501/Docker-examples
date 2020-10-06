@@ -2,14 +2,17 @@
 namespace App\Controllers;
 
 use App\Services\ExchangeRatesService;
+use App\Helpers\CurrenciesHelper;
 
 class ExchangeRatesController extends \WP_REST_Controller {
 	private $exchangeRatesService;
+    private $currenciesHelper;
 
 	public function __construct() {
 		$this->namespace = 'rates/v1';
 		$this->rest_base = 'currency';
 		$this->exchangeRatesService = new ExchangeRatesService();
+		$this->currenciesHelper = new CurrenciesHelper();
 	}
 
 	public function initPlugin() {
@@ -30,8 +33,8 @@ class ExchangeRatesController extends \WP_REST_Controller {
 
 
 	public function getCurrency() {
-		$settings = [ 'mode' => 'live'];
-            //getCurrencyByMode
-		return $this->exchangeRatesService->getCurrencyLive();
+		$mode = $this->currenciesHelper->getCurrenciesMode();
+
+		return $this->exchangeRatesService->getCurrencyByMode($mode);
 	}
 }
