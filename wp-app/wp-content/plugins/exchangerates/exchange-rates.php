@@ -11,14 +11,19 @@ require_once __DIR__ . '/vendor/autoload.php';
 use App\Controllers\MenusController;
 use App\Controllers\ExchangeRatesController;
 use App\PluginState as State;
+use App\Widgets\ExchangeRatesWidget;
 
 define('PLUGIN_BASE_FILE', __FILE__);
 
+//Install / Uninstall
 (new State(PLUGIN_BASE_FILE));
 
-//( new MenusController );
-$menusController = new MenusController();
-$menusController->addMenus();
+//Admin Menu
+(new MenusController);
 
-$exchangeRatesController = new ExchangeRatesController();
-$exchangeRatesController->initPlugin();
+//REST Controller
+(new ExchangeRatesController());
+
+//Widget
+ new ExchangeRatesWidget();
+

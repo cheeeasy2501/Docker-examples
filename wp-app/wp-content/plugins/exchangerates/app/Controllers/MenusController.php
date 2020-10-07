@@ -5,14 +5,13 @@ use App\Functions\MenuFunctions;
 class MenusController {
     private $functions;
 
-	public function __construct(){
-	    $this->functions = new MenuFunctions();
-	}
+    public function __construct() {
+        $this->functions = new MenuFunctions();
+        add_action('admin_menu', [$this, 'registerMenus']);
+    }
 
-	public function addMenus() {
-	    add_action('admin_menu', function () {
-            $this->functions->addMenu();
-            $this->functions->addSubMenu();
-        });
+    public function registerMenus() {
+        $this->functions->addMenu();
+        $this->functions->addSubMenu();
     }
 }
