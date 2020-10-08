@@ -7,15 +7,19 @@ use App\Services\ExchangeRatesService;
 class CurrencyCron {
     private $exchangeRatesService;
 
-    public function install() {
+    public function __construct() {
         $this->exchangeRatesService = new ExchangeRatesService();
         add_filter('cron_schedules', [$this, 'everyFiveMinute']);
         add_action('wp', [$this, 'activator']);
         add_action('exchange_rates_update_currencies', [$this, 'doUpdateCurrencies']);
     }
 
-    private function everyFiveMinute($schedules) {
-        $schedules['five_min'] = array('interval' => 10, 'display' => 'Раз в 5 минут');
+    public function install() {
+        return new self;
+    }
+
+    public function everyFiveMinute($schedules) {
+        $schedules['five_min'] = array('interval' => 30, 'display' => 'Раз в 5 минут');
 
         return $schedules;
     }

@@ -3,11 +3,9 @@
 namespace App\Services;
 
 use App\Helpers\CurrenciesHelper;
-use App\Objects\Currency as CurrencyObject;
 
 class ExchangeRatesService {
     const ALL_CURRENCY_API = 'https://www.nbrb.by/api/exrates/rates?periodicity=0';
-    const BY_CURRENCY_NAME_API = 'https://www.nbrb.by/api/exrates/rates/{{currency_name}}?parammode=2';
 
     private $currenciesHelper;
 

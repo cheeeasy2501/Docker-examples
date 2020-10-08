@@ -19,7 +19,11 @@ class ExchangeRatesController extends \WP_REST_Controller {
     }
 
     public function register_routes() {
-        register_rest_route($this->namespace, "/$this->rest_base", [['methods' => 'GET', 'callback' => [$this, 'getCurrency']],]);
+        register_rest_route($this->namespace, "/$this->rest_base", [['methods' => 'GET', 'callback' => [$this, 'getCurrency'], 'permission_callback'=> [$this, 'permissions']],]);
+    }
+
+    private function permissions() {
+        return true;
     }
 
     public function getCurrency() {
