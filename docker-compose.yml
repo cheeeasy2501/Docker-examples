@@ -26,6 +26,9 @@ services:
     restart: always
 
   wordpress:
+#    build:
+#      context: .
+#      dockerfile: config/cron/Dockerfile
     container_name: wp
     image: wordpress:5.1.1-fpm
     ports:
@@ -40,3 +43,13 @@ services:
     links:
       - mysql
     restart: always
+
+  scheduler:
+    build:
+      context: .
+      dockerfile: config/cron/Dockerfile
+    container_name: wp-scheduler
+    volumes:
+      - ./wp-app:/var/www/html
+    links:
+      - mysql
